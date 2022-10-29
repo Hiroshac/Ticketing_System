@@ -3,7 +3,7 @@ import React from 'react'
 export const SideNav = () => {
   return (
     <div>
-            <div style={{width:"12%", float:"left", marginTop:"5%", backgroundColor:"#00004D"}}>
+            <div style={{width:"12%", marginTop:"5%", backgroundColor:"#00004D"}}>
                     <nav class="navbar navbar-expand-lg text-light" >
                           <div style={{ marginTop:"15%", height:"100%"}}>
                             <a href="addsubject" class="nav-link text-light" aria-current="true">
