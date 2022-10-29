@@ -32,20 +32,20 @@ export const AddInvalidToken = () => {
       }
     } catch (err) {
       // Handle Error Here
-      console.error(err)
+      console.error(err);
     }
   }
 
   return (
     <div>
-    <div className='row border-1 shadow ' style={{width:"80%", marginLeft:"10%"}}>
-      <div className='col'>
+    <div className='row ' style={{width:"100%"}}>
+      <div className='col-sm-2' style={{ backgroundColor: "#00004D"}}>
         <SideNav/>
       </div>
       <div className='col'>
-        <form onSubmit={addToken}>
-              <div style={{width:"70%", marginTop:"5%"}}>
-              <div className='border shadow rounded-3 bg-light'>
+        <form className='' onSubmit={addToken}>
+              <div style={{width:"90%", marginTop:"5%",marginLeft:"5%"}}>
+              <div className='border shadow rounded-3 bg-light p-2'>
               <h3 className='text-center mb-4'> Add About Invalid Token</h3>
               <div class="form-group row">
                           <label for="inputPassword" class="col-sm-2 col-form-label">Insepector ID</label>
