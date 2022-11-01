@@ -7,10 +7,10 @@ import timetablerouter from "./Routes/TimeTable.route.js";
 
 const app = express();
 
-app.use(express())
+app.use(express.json())
 app.use(cors())
 app.use("/invalidtoken", invalidtokenrouter);
-app.use("timetable", timetablerouter)
+app.use("/timetable", timetablerouter)
 
 const port = process.env.PORT || 5000
 dotenv.config();

@@ -8,7 +8,10 @@ const timetable = new mongoose.Schema(
         destination:{
             type: String
         },
-        time:{
+        starttime:{
+            type: Number
+        },
+        endtime:{
             type: Number
         }
     }

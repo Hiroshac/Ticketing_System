@@ -4,7 +4,7 @@ import TimeTableModel from "../Models/TimeTable.model.js";
 export const createTimetable = async (req, res, next) =>{
     const table = new TimeTableModel(req.body);
     try {
-        const savedTable = await token.save();
+        const savedTable = await table.save();
         res.status(200).json(savedTable)
     }
     catch(err) {
