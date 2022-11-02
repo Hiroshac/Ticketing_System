@@ -4,11 +4,15 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import invalidtokenrouter from "./Routes/InvalidToken.routes.js";
 import timetablerouter from "./Routes/TimeTable.route.js";
+import auth from './Routes/auth.routes.js';
 
+//middleware
 const app = express();
-
 app.use(express.json())
 app.use(cors())
+
+//routes
+app.use("/auth", auth);
 app.use("/invalidtoken", invalidtokenrouter);
 app.use("/timetable", timetablerouter)
 

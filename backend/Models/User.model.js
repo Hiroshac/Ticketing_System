@@ -18,10 +18,12 @@ const UserSchema = new mongoose.Schema(
     address: {
       type: String,
     },
-    NIC: {
+    type: {
+      type: String,
+    },
+    nic: {
       type: String,
       required: true,
-      unique: true,
     },
     password: {
       type: String,
