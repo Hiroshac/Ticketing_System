@@ -1,36 +1,18 @@
 import InvalidTokenModel from '../Models/InvalidToken.model.js';
 
-// create stream
-
-export const createInvalids = async (req, res, next) => {
-  const token = new InvalidTokenModel(req.body)
+//create invalid tokens
+export const createInvalids = async (req, res, next) =>{
+  const token = new InvalidTokenModel(req.body);
   try {
-    const savedToken = await token.save()
-    res.status(200).json(savedToken)
-  } catch (err) {
-    next(err)
+      const savedToken = await token.save();
+      res.status(200).json(savedToken)
+  }
+  catch(err) {
+      next(err);
   }
 }
 
-// export const createInvalids = async (req, res, next) => {
-//   try {
-//     const token = new InvalidTokenModel({
-//       inspectorid: req.body.inspectorid,
-//       date: req.body.date,
-//       count: req.body.count,
-//       grade: req.body.grade,
-//       route: req.file.route,
-//       reason:req.body.reason
-//     })
-//     await token.save()
-//     res.status(200).json('Success.....')
-//   } catch (err) {
-//     next(err)
-//   }
-// }
-
-//get Streams
-
+//get invalid tokens
 export const getInvalids = async (req, res, next) => {
     try {
       const tokens = await InvalidTokenModel.find()
@@ -39,3 +21,5 @@ export const getInvalids = async (req, res, next) => {
       next(err)
     }
   }
+
+ 
