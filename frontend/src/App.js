@@ -9,6 +9,11 @@ import { AddInspector } from "./component/admin/SAdmin/AddInspector";
 import { AddPublicManager } from "./component/admin/SAdmin/AddPublicManager";
 import { NavBar } from "./component/common/NavBar";
 import { ViewTimeTables } from "./component/user/common/ViewTimeTables";
+import Login from "./component/common/login/Login";
+// import { Login } from "./component/common/login/Login";
+import { Registation } from "./component/common/registation/Registation";
+import { Visitorlog } from "./component/user/Guest/Visitorlog";
+import { Dashlocal } from "./component/user/Local/Dashlocal";
 
 function App() {
   return (
@@ -19,6 +24,11 @@ function App() {
           {/* Client */}
           <Route path={'/'} exact element={<Home/>}/>
           <Route path={'/gettable'} exact element={<ViewTimeTables/>}/>
+          <Route path={'/reg'} exact element={<Registation/>}/>
+          <Route path={'/login'} exact element={<Login/>}/>
+          <Route path={'/localdash'} exact element={<Dashlocal/>}/>
+          <Route path={'/visitlog'} exact element={<Visitorlog/>}/>
+
           {/* <Route path={'/'} exact element={<Home/>}/> */}
           {/* Inspector */}
           <Route path={'/addinvalid'} exact element={<AddInvalidToken/>}/>

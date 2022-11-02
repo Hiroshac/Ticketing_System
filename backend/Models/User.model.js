@@ -1,0 +1,42 @@
+import mongoose from 'mongoose'
+
+const UserSchema = new mongoose.Schema(
+  {
+    fullname: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    contactno: {
+      type: String,
+      required: true,
+    },
+    address: {
+      type: String,
+    },
+    type: {
+      type: String,
+    },
+    nic: {
+      type: String,
+      required: true,
+    },
+    password: {
+      type: String,
+      required: true,
+    },
+    isAdmin: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  {
+    timestamps: true,
+  }
+)
+
+export default mongoose.model('User', UserSchema)
