@@ -8,25 +8,39 @@ export const SideNav = () => {
         style={{ heihgt:"100%", backgroundColor: "#00004D", }}
       >
         <div className="" style={{padding:"5%"}}>
-          <button className="btn" style={{width:"90%",margin:"5%"}}>Add Invalid Tokens</button>
-          <button className="btn" style={{width:"90%",margin:"5%"}}>Invalid Token Reports</button>
+          <button className="btn" style={{width:"100%",margin:"5%"}}>
+          <a href="addinvalid" class="nav-link text-black" aria-current="true">
+              <i class="fas fa-chart-area fa-fw me-3"></i><span>Add Invalid Tokens</span>
+          </a>
+          </button>
+          <button className="btn" style={{width:"100%",margin:"5%"}}>
+          <a href="getinvalid" class="nav-link text-black" aria-current="true">
+              <i class="fas fa-chart-area fa-fw me-3"></i><span>Invalid Token Reports</span>
+          </a>
+          </button>
+          <button className="btn" style={{width:"100%",margin:"5%"}}>
+          <a href="addtable" class="nav-link text-black" aria-current="true">
+              <i class="fas fa-chart-area fa-fw me-3"></i><span>Add Time Tables</span>
+          </a>
+          </button>
+          <button className="btn" style={{width:"100%",margin:"5%"}}>
+          <a href="allocate" class="nav-link text-black" aria-current="true">
+              <i class="fas fa-chart-area fa-fw me-3"></i><span>Allocate Inspectors</span>
+          </a>
+          </button>
+          <button className="btn" style={{width:"100%",margin:"5%"}}>
+          <a href="manager" class="nav-link text-black" aria-current="true">
+              <i class="fas fa-chart-area fa-fw me-3"></i><span>Add Public Transport Managers</span>
+          </a>
+          </button>
+          <button className="btn" style={{width:"100%",margin:"5%"}}>
+          <a href="inspector" class="nav-link text-black" aria-current="true">
+              <i class="fas fa-chart-area fa-fw me-3"></i><span>Add Insepectors</span>
+          </a>
+          </button>
         </div>
       </div>
-      {/* <div style={{width:"12%", marginTop:"5%", backgroundColor:"#00004D"}}>
-                    <nav class="navbar navbar-expand-lg text-light" >
-                          <div style={{ marginTop:"15%", height:"100%"}}>
-                            <a href="addsubject" class="nav-link text-light" aria-current="true">
-                              <i class="fas fa-chart-area fa-fw me-3"></i><span>Add Invalid Tokens</span>
-                            </a>
-                            <br></br><br></br>
-                            <a href="addstream" class="nav-link text-light">
-                              <i class="fas fa-chart-area fa-fw me-3"></i><span>Invalid Token Reports</span>
-                            </a>
-                            <br></br><br></br>                                         */}
-      {/* </div>
-                      </nav>
-              <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>          
-            </div> */}
+      <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
     </div>
   );
 };

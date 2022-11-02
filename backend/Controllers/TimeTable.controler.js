@@ -1,5 +1,6 @@
 import TimeTableModel from "../Models/TimeTable.model.js";
-// create stream
+
+// create create time table
 
 export const createTimetable = async (req, res, next) =>{
     const table = new TimeTableModel(req.body);
@@ -12,7 +13,7 @@ export const createTimetable = async (req, res, next) =>{
     }
 }
 
-//get Streams
+//get time tables
 
 export const getTables = async (req, res, next) => {
     try {

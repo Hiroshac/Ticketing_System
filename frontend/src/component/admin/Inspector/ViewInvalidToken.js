@@ -23,8 +23,9 @@ export const ViewInvalidToken = () => {
             <div className='col-sm-2' style={{ backgroundColor: "#00004D"}}>
               <SideNav/>
             </div>
-            <div className='col' style={{  width: '70%' }}>
+            <div className='col' style={{  width: '70%', marginTop:"5%" }}>
                   <h3 className='navi'>Invalid Tokens</h3>
+                  <br></br>
                   <table class='table'>
                     <thead>
                       <tr>
