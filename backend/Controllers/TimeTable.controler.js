@@ -1,8 +1,10 @@
 import TimeTableModel from "../Models/TimeTable.model.js";
 
-// create create time table
+export const TimeTableAPI = ()=>{
+  
+  // create create time table
 
-export const createTimetable = async (req, res, next) =>{
+  const createTimetable = async (req, res, next) =>{
     const table = new TimeTableModel(req.body);
     try {
         const savedTable = await table.save();
@@ -11,11 +13,11 @@ export const createTimetable = async (req, res, next) =>{
     catch(err) {
         next(err);
     }
-}
+  }
 
-//get time tables
+  //get time tables
 
-export const getTables = async (req, res, next) => {
+  const getTables = async (req, res, next) => {
     try {
       const tables = await TimeTableModel.find()
       res.status(200).json(tables)
@@ -23,3 +25,15 @@ export const getTables = async (req, res, next) => {
       next(err)
     }
   }
+
+  
+  return {
+
+    add: createTimetable,
+
+    get: getTables,
+  }
+
+
+}
+

@@ -1,10 +1,10 @@
 import express from 'express'
-import { createRoute, getRoutes } from '../Controllers/Route.controler.js';
+import { routeAPI } from '../Controllers/Route.controler.js';
 
 const rootrouter = express.Router();
 
-rootrouter.post('/add', createRoute);
+rootrouter.post('/add', routeAPI().add);
 
-rootrouter.get('/get', getRoutes);
+rootrouter.get('/get', routeAPI().get);
 
 export default rootrouter;

@@ -1,7 +1,10 @@
 import InvalidTokenModel from '../Models/InvalidToken.model.js';
 
-//create invalid tokens
-export const createInvalids = async (req, res, next) =>{
+
+export const InvalidTokenAPI = ()=>{
+
+  //create invalid tokens
+ const createInvalids = async (req, res, next) =>{
   const token = new InvalidTokenModel(req.body);
   try {
       const savedToken = await token.save();
@@ -13,7 +16,7 @@ export const createInvalids = async (req, res, next) =>{
 }
 
 //get invalid tokens
-export const getInvalids = async (req, res, next) => {
+ const getInvalids = async (req, res, next) => {
     try {
       const tokens = await InvalidTokenModel.find()
       res.status(200).json(tokens)
@@ -21,5 +24,16 @@ export const getInvalids = async (req, res, next) => {
       next(err)
     }
   }
+
+    
+  return {
+
+    add: createInvalids,
+
+    get: getInvalids,
+  }
+
+
+}
 
  
