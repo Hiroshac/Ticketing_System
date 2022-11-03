@@ -11,6 +11,7 @@ export const Home = () => {
         style={{ marginTop: "3%", marginLeft: "20%", width: "60%" }}
       >
         <h3 className="text-center my-5">Generate Token</h3>
+        {/* for local trancporter */}
         <div className="row text-center">
           <div className="col" src="">
             <Link to="/reg">
@@ -20,6 +21,7 @@ export const Home = () => {
               </button>
             </Link>
           </div>
+          {/* for visitor */}
           <div className="col" src="">
             <Link to="/visitlog">
               <button className="bg-transparent border-0" style={{ height: "50%",width:"50%" }}>

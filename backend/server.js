@@ -46,6 +46,7 @@ app.listen(port, () => {
     console.log(`Server is running on port: ${port}`)
   })
 
+  //when disconnect port
 mongoose.connection.on('disconnected',()=>{
     console.log("mongo db disconnected");
 }
