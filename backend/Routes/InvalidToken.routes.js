@@ -1,10 +1,10 @@
 import express from 'express'
-import { createInvalids, getInvalids } from '../Controllers/InvalidToken.controler.js';
+import { InvalidTokenAPI } from '../Controllers/InvalidToken.controler.js';
 
 const invalidtokenrouter = express.Router();
 
-invalidtokenrouter.post('/add', createInvalids);
+invalidtokenrouter.post('/add', InvalidTokenAPI().add);
 
-invalidtokenrouter.get('/get', getInvalids);
+invalidtokenrouter.get('/get', InvalidTokenAPI().get);
 
 export default invalidtokenrouter;

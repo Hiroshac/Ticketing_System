@@ -6,7 +6,9 @@ import jwt from 'jsonwebtoken';
 
 //user registation
 
-export const register = async (req, res, next) => {
+export const authAPI = ()=>{
+
+   const register = async (req, res, next) => {
     try {
       const user = await User.findOne({ email: req.body.email })
       if (user != null) {
@@ -28,7 +30,7 @@ export const register = async (req, res, next) => {
 
   // user Login
 
-  export const login = async (req, res, next) => {
+   const login = async (req, res, next) => {
     try {
       const user = await User.findOne({ email: req.body.email })
       if (!user) return next(createError(404, 'User not found!'))
@@ -56,4 +58,15 @@ export const register = async (req, res, next) => {
       next(err)
     }
   }
+
+  return {
+
+    add: register,
+
+    log: login,
+  }
+  
+}
+
+
 

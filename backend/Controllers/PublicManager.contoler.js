@@ -1,8 +1,10 @@
 import PublicManagerModel from "../Models/PublicManager.model.js"
 
-//create manager
+export const publicmanagerAPI = () =>{
 
-export const createManager = async (req, res, next) => {
+  //create manager
+
+  const createManager = async (req, res, next) => {
     const token = new PublicManagerModel(req.body)
     try {
       const savedInspector = await token.save()
@@ -12,8 +14,8 @@ export const createManager = async (req, res, next) => {
     }
   }
 
-//get all managers
-export const getAllManagers = async (req, res, next) => {
+  //get all managers
+  const getAllManagers = async (req, res, next) => {
     try {
       const inspectors = await PublicManagerModel.find()
       res.status(200).json(inspectors)
@@ -21,3 +23,13 @@ export const getAllManagers = async (req, res, next) => {
       next(err)
     }
   }
+
+  return {
+
+    add: createManager,
+
+    get: getAllManagers,
+  }
+
+}
+

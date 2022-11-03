@@ -1,10 +1,10 @@
 import express from 'express'
-import { createTimetable, getTables } from '../Controllers/TimeTable.controler.js';
+import { TimeTableAPI } from '../Controllers/TimeTable.controler.js';
 
 const timetablerouter = express.Router();
 
-timetablerouter.post('/add', createTimetable);
+timetablerouter.post('/add', TimeTableAPI().add);
 
-timetablerouter.get('/get', getTables);
+timetablerouter.get('/get', TimeTableAPI().get);
 
 export default timetablerouter;

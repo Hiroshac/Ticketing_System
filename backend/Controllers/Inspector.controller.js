@@ -1,8 +1,10 @@
 import InspectorModel from "../Models/Inspector.model.js"
 
 
-//create inspectors
-export const createInspector = async (req, res, next) => {
+export const InspectorAPI = ()=>{
+
+  //create inspectors
+  const createInspector = async (req, res, next) => {
     const token = new InspectorModel(req.body)
     try {
       const savedInspector = await token.save()
@@ -12,8 +14,8 @@ export const createInspector = async (req, res, next) => {
     }
   }
 
-//get all inspectors
-export const getAllInspectors = async (req, res, next) => {
+  //get all inspectors
+  const getAllInspectors = async (req, res, next) => {
     try {
       const inspectors = await InspectorModel.find()
       res.status(200).json(inspectors)
@@ -21,3 +23,14 @@ export const getAllInspectors = async (req, res, next) => {
       next(err)
     }
   }
+
+  
+  return {
+
+    add: createInspector,
+
+    get: getAllInspectors,
+  }
+
+
+}

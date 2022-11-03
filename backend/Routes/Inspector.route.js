@@ -1,10 +1,10 @@
 import express from 'express'
-import { createInspector, getAllInspectors } from '../Controllers/Inspector.controller.js';
+import { InspectorAPI } from '../Controllers/Inspector.controller.js';
 
 const inspectroute = express.Router();
 
-inspectroute.post('/add', createInspector);
+inspectroute.post('/add', InspectorAPI().add);
 
-inspectroute.get('/get', getAllInspectors);
+inspectroute.get('/get', InspectorAPI().get);
 
 export default inspectroute;

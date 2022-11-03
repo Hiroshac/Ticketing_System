@@ -1,10 +1,10 @@
 import express from 'express'
-import { createManager, getAllManagers } from '../Controllers/PublicManager.contoler.js';
+import { publicmanagerAPI } from '../Controllers/PublicManager.contoler.js';
 
 const publicmanagerroute = express.Router();
 
-publicmanagerroute.post('/add', createManager);
+publicmanagerroute.post('/add', publicmanagerAPI().add);
 
-publicmanagerroute.get('/get', getAllManagers);
+publicmanagerroute.get('/get', publicmanagerAPI().get);
 
 export default publicmanagerroute;

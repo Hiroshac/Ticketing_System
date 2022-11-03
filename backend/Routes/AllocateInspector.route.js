@@ -1,10 +1,10 @@
 import express from 'express'
-import { AllocateInspector, getAllocatedInspectors } from '../Controllers/AllocateInspector.controler.js';
+import { AllocateAPI } from '../Controllers/AllocateInspector.controler.js';
 
 const inspectorroute = express.Router();
 
-inspectorroute.post('/add', AllocateInspector);
+inspectorroute.post('/add', AllocateAPI().add);
 
-inspectorroute.get('/get', getAllocatedInspectors);
+inspectorroute.get('/get', AllocateAPI().get);
 
 export default inspectorroute;
