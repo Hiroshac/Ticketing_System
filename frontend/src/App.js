@@ -14,6 +14,8 @@ import Login from "./component/common/login/Login";
 import { Registation } from "./component/common/registation/Registation";
 import { Visitorlog } from "./component/user/Guest/Visitorlog";
 import { Dashlocal } from "./component/user/Local/Dashlocal";
+import AdminLogin from "./component/common/login/AdminLogin";
+import { AdminReg } from "./component/common/registation/AdminReg";
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
           {/* SAdmin*/}
           <Route path={'/inspector'} exact element={<AddInspector/>}/>
           <Route path={'/manager'} exact element={<AddPublicManager/>}/>
+          <Route path={'/admin'} exact element={<AdminLogin/>}/>
+          <Route path={'/regA'} exact element={<AdminReg/>}/>
 
         </Routes>
       </BrowserRouter>
