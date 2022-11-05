@@ -1,9 +1,11 @@
 import { useState, React, useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Swal from "sweetalert2";
-import { SideNav } from '../../admin/SideNav';
 
 export const AddCredit = () => {
+
+  const navi = useNavigate();
 
     async function SweatAlert(text, item) {
         Swal.fire({
@@ -35,7 +37,8 @@ export const AddCredit = () => {
       {
         axios.post('http://localhost:5000/credit/add', credit);
         SweatAlert('Credit added successfully', 'success')
-        // navigate('/getinvalidtokens')
+        navi("/addcredit")
+        // window.location.reload(false);
       }
     } catch (err) {
       // Handle Error Here
@@ -46,7 +49,7 @@ export const AddCredit = () => {
   return (
     <div>
             <div className='row ' style={{width:"100%"}}>
-            <div className='col'>
+            <div className='col'  style={{width:"70%",marginLeft:"5%"}}>
               <form className='' onSubmit={addCredit}>
                     <div style={{width:"90%", marginTop:"5%",marginLeft:"5%"}}>
                     <div className='border shadow rounded-3 bg-light p-2'>
@@ -54,26 +57,33 @@ export const AddCredit = () => {
                     <div class="form-group row">
                                 <label  class="col-sm-2 col-form-label">Payment Method</label>
                                 <div class="col-sm-10">
-                                <input type="password" class="form-control"  onChange={(e)=>setMethod(e.target.value)}/>
+                                <input type="checkbox"  onChange={(e)=>setMethod(e.target.value)}/>
+                                <label> Visa</label><br></br>
+                                <input type="checkbox" onChange={(e)=>setMethod(e.target.value)}/>
+                                <label> Master Card</label><br></br>
+                                <input type="checkbox" onChange={(e)=>setMethod(e.target.value)}/>
+                                <label> American Express</label><br></br>
+                                <input type="checkbox" onChange={(e)=>setMethod(e.target.value)}/>
+                                <label> PayPal</label><br></br>
                                 </div>
                             </div>
                             <br></br>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Date</label>
+                                <label class="col-sm-2 col-form-label">Amount</label>
                                 <div class="col-sm-10">
-                                <input type="date" class="form-control"  onChange={(e)=>setAmount(e.target.value)}  />
+                                <input class="form-control"  onChange={(e)=>setAmount(e.target.value)}  />
                                 </div>
                             </div>
                             <br></br>
                             <div class="form-group row">
-                                <label  class="col-sm-2 col-form-label">Invalid Token Count</label>
+                                <label  class="col-sm-2 col-form-label">Card Number</label>
                                 <div class="col-sm-10">
                                 <input class = "form-control text-box single-line inputNumeric" type="number"  onChange={(e)=>setCardno(e.target.value)}/>
                                 </div>
                             </div>
                             <br></br>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Route</label>
+                                <label class="col-sm-2 col-form-label">CVV</label>
                                 <div class="col-sm-10">
                                 <input class = "form-control text-box single-line inputNumeric" type="number"  onChange={(e)=>setCvv(e.target.value)}/>
                                 </div>
@@ -81,7 +91,7 @@ export const AddCredit = () => {
                             </div>
                             <br></br>
                             <div class="form-group row">
-                                <label  class="col-sm-2 col-form-label">Invalid Reason</label>
+                                <label  class="col-sm-2 col-form-label"> Date of Expire</label>
                                 <div class="col-sm-10">
                                 <input type="date" class="form-control" onChange={(e)=>setExpire(e.target.value)}/>
                                 </div>
