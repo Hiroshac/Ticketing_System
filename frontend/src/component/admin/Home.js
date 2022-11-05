@@ -2,10 +2,12 @@ import React from "react";
 import local from "../image/local.jpeg";
 import visitor from "../image/vistor.jpeg";
 import { Link } from "react-router-dom";
+import { Navbarhome } from "../common/Navbarhome";
 
 export const Home = () => {
   return (
     <div>
+      <Navbarhome/>
       <div
         className=""
         style={{ marginTop: "3%", marginLeft: "20%", width: "60%" }}

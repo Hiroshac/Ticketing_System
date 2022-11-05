@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavBar } from "../../common/NavBar";
 import { Tokenlocal } from "./Tokenlocal";
 
 export const Dashlocal = () => {
@@ -23,6 +24,7 @@ export const Dashlocal = () => {
   console.log(item);
   return (
     <div>
+      <NavBar/>
       <div className="" style={{ width: "30%", marginLeft: "35%",marginTop: "5%" }}>
         
         <h3 className="text-center">Genarate Token</h3>
