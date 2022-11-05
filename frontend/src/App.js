@@ -13,6 +13,8 @@ import { Registation } from "./component/common/registation/Registation";
 import { Visitorlog } from "./component/user/Guest/Visitorlog";
 import { Dashlocal } from "./component/user/Local/Dashlocal";
 import { AddCredit } from "./component/user/Guest/AddCredit";
+import AdminLogin from "./component/common/login/AdminLogin";
+import { AdminReg } from "./component/common/registation/AdminReg";
 
 function App() {
   return (
@@ -38,6 +40,10 @@ function App() {
           <Route path={'/addtable'} exact element={<AddTimeTables/>}/>
           <Route path={'/allocate'} exact element={<AllocateInspector/>}/>
           {/* SAdmin*/}
+        
+          <Route path={'/admin'} exact element={<AdminLogin/>}/>
+          <Route path={'/regA'} exact element={<AdminReg/>}/>
+
         </Routes>
       </BrowserRouter>
     </div>
