@@ -1,5 +1,5 @@
 import express from 'express'
-import { creditAPI } from '../Controllers/Credit.controler';
+import { creditAPI } from '../Controllers/Credit.controler.js';
 
 const creditroute = express.Router();
 
