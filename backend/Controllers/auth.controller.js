@@ -58,15 +58,29 @@ export const authAPI = ()=>{
       next(err)
     }
   }
+  //get users by filter
+const getuser = async (req,res,next) => {
+  try{
+    const filter = await User.find(
+      {type : req.body.type}
+    )
+    res.status(200).json(filter)
+  }catch(err){next(err)}
+}
 
   return {
 
     add: register,
 
     log: login,
+
+    filter: getuser,
   }
   
 }
+
+
+
 
 
 

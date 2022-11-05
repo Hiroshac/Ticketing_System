@@ -2,6 +2,7 @@ import {React, useState, useEffect} from 'react'
 import axios from 'axios';
 import { SideNav } from '../SideNav';
 import Swal from 'sweetalert2'
+import { Navbaradmin } from '../../common/Navbaradmin';
 
 
 export const AllocateInspector = () => {
@@ -67,6 +68,7 @@ useEffect(() => {
 
     return (
       <div>
+        <Navbaradmin/>
         <div className='row ' style={{width:"100%"}}>
             <div className='col-sm-2' style={{ backgroundColor: "#00004D"}}>
               <SideNav/>

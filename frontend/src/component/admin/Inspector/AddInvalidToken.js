@@ -2,6 +2,7 @@ import { useState, React, useEffect} from 'react';
 import axios from 'axios';
 import { SideNav } from '../SideNav';
 import Swal from "sweetalert2";
+import { Navbaradmin } from '../../common/Navbaradmin';
 
 async function SweatAlert(text, item) {
   Swal.fire({
@@ -57,6 +58,7 @@ export const AddInvalidToken = () => {
 
   return (
   <div>
+    <Navbaradmin/>
       <div className='row ' style={{width:"100%"}}>
             <div className='col-sm-2' style={{ backgroundColor: "#00004D"}}>
               <SideNav/>

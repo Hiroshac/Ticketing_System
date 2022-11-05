@@ -1,6 +1,7 @@
 import {React, useEffect, useState} from 'react'
 import axios from 'axios'
 import { SideNav } from '../SideNav'
+import { Navbaradmin } from '../../common/Navbaradmin'
 
 export const ViewInvalidToken = () => {
 
@@ -19,6 +20,7 @@ export const ViewInvalidToken = () => {
 
   return (
     <div>
+      <Navbaradmin/>
       <div className='row ' style={{width:"100%"}}>
             <div className='col-sm-2' style={{ backgroundColor: "#00004D"}}>
               <SideNav/>
