@@ -9,6 +9,8 @@ import inspectorroute from "./Routes/AllocateInspector.route.js";
 import publicmanagerroute from "./Routes/PublicManager.route.js";
 import inspectroute from "./Routes/Inspector.route.js";
 import auth from './Routes/auth.routes.js';
+import creditroute from './Routes/Credit.route.js';
+
 
 //middleware
 const app = express();
@@ -23,6 +25,7 @@ app.use("/root", rootrouter)
 app.use("/allocate", inspectorroute)
 app.use("/manager", publicmanagerroute)
 app.use("/inspector", inspectroute)
+app.use("/credit", creditroute)
 
 
 const port = process.env.PORT || 5000
