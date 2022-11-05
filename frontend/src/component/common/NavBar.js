@@ -34,24 +34,19 @@ export const NavBar = () => {
           id="navbarSupportedContent"
         >
           <ul class="navbar-nav justify-content-center ">
-            <li class="nav-item  mx-5">
-              <a class="nav-link text-light" href="/">
+          <li class="nav-item mx-5">
+              <a class="nav-link text-light" href="localdash">
                 Home
               </a>
             </li>
             <li class="nav-item mx-5">
-              <a class="nav-link text-light" href="#">
+              <a class="nav-link text-light" href="gettable">
                 Time Table
               </a>
             </li>
             <li class="nav-item mx-5">
-              <a class="nav-link text-light" href="#">
-                Tokens
-              </a>
-            </li>
-            <li class="nav-item mx-5">
-              <a class="nav-link text-light" href="#">
-                Contact Us
+              <a class="nav-link text-light" href="addcredit">
+                Add Credit
               </a>
             </li>
             <li class="nav-item mx-5">

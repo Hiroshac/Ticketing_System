@@ -75,7 +75,7 @@ useEffect(() => {
                           <div className='border shadow rounded-3 bg-light'>
                               <form onSubmit={allocate} className='mx-5 mt-5 mb-5'>
                                     <div class="form-group">
-                                      <label>Allocated inspector ID</label>
+                                      <label>Allocated inspector Name</label>
                                       <input class="form-control" onChange={(e)=>setInspectorid(e.target.value)} />
                                     </div>
                                     <div class="form-group">
