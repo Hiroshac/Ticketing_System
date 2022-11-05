@@ -6,8 +6,6 @@ import invalidtokenrouter from "./Routes/InvalidToken.routes.js";
 import timetablerouter from "./Routes/TimeTable.route.js";
 import rootrouter from "./Routes/Route.route.js";
 import inspectorroute from "./Routes/AllocateInspector.route.js";
-import publicmanagerroute from "./Routes/PublicManager.route.js";
-import inspectroute from "./Routes/Inspector.route.js";
 import auth from './Routes/auth.routes.js';
 import creditroute from './Routes/Credit.route.js';
 
@@ -23,8 +21,6 @@ app.use("/invalidtoken", invalidtokenrouter);
 app.use("/timetable", timetablerouter)
 app.use("/root", rootrouter)
 app.use("/allocate", inspectorroute)
-app.use("/manager", publicmanagerroute)
-app.use("/inspector", inspectroute)
 app.use("/credit", creditroute)
 
 
