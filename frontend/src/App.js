@@ -15,11 +15,12 @@ import { Dashlocal } from "./component/user/Local/Dashlocal";
 import { AddCredit } from "./component/user/Guest/AddCredit";
 import AdminLogin from "./component/common/login/AdminLogin";
 import { AdminReg } from "./component/common/registation/AdminReg";
+import { SuperDash } from "./component/admin/sadmin/SuperDash";
 
 function App() {
   return (
     <div className="App">
-      <NavBar/>
+      {/* <NavBar/> */}
       <BrowserRouter>
         <Routes>
           {/* Client */}
@@ -43,6 +44,7 @@ function App() {
         
           <Route path={'/admin'} exact element={<AdminLogin/>}/>
           <Route path={'/regA'} exact element={<AdminReg/>}/>
+          <Route path={'/sdash'} exact element={<SuperDash/>}/>
 
         </Routes>
       </BrowserRouter>

@@ -62,11 +62,11 @@ function AdminLogin(props) {
             const ldata =  res.data.details;             
             localStorage.setItem('user', JSON.stringify(ldata))
             {(res.data.details.type === 'SAdmin') ? (
-              navigate('/')
-            ): (res.data.details.type === 'SAdmin') ? (
-              navigate('/')
+              navigate('/sdash')
+            ): (res.data.details.type === 'Inspector') ? (
+              navigate('/getinvalid')
             ):(
-              navigate('/')
+              navigate('/addtable')
             )}
         })
     }
