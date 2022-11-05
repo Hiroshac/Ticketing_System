@@ -1,8 +1,18 @@
 import {React, useState, useEffect} from 'react'
 import axios from 'axios';
 import { SideNav } from '../SideNav';
+import Swal from 'sweetalert2'
+
 
 export const AllocateInspector = () => {
+
+  async function SweatAlert(text, item) {
+    Swal.fire({
+    icon: item,
+    text: text,
+    })
+}
+
 
   const [data, setData] = useState([]);
 
@@ -23,17 +33,17 @@ export const AllocateInspector = () => {
     try {
       if ((inspectorid == '' ) || (date == '' ) || (route == '' ) ) 
       {
-        // SweatAlert('Please fill the required fields.', 'warning')
+        SweatAlert('Please fill the required fields.', 'warning')
       }
       else if ((inspectorid == '' ) && (date == '' ) (route == '' ) ) 
       {
-        // SweatAlert('Please fill the required fields.', 'warning')
+        SweatAlert('Please fill the required fields.', 'warning')
       }
        else 
       {
               
         axios.post('http://localhost:5000/allocate/add', inspector);
-        // SweatAlert('Successfully insereted', 'success')
+        SweatAlert('Successfully insereted', 'success')
         alert('success');
         // navigate('/getinvalidtokens')
       }

@@ -5,8 +5,6 @@ import { AddInvalidToken } from "./component/admin/Inspector/AddInvalidToken";
 import { ViewInvalidToken } from "./component/admin/Inspector/ViewInvalidToken";
 import { AddTimeTables } from "./component/admin/PublicTransportManager/AddTimeTables";
 import { AllocateInspector } from "./component/admin/PublicTransportManager/AllocateInspector";
-import { AddInspector } from "./component/admin/SAdmin/AddInspector";
-import { AddPublicManager } from "./component/admin/SAdmin/AddPublicManager";
 import { NavBar } from "./component/common/NavBar";
 import { ViewTimeTables } from "./component/user/common/ViewTimeTables";
 import Login from "./component/common/login/Login";
@@ -14,6 +12,7 @@ import Login from "./component/common/login/Login";
 import { Registation } from "./component/common/registation/Registation";
 import { Visitorlog } from "./component/user/Guest/Visitorlog";
 import { Dashlocal } from "./component/user/Local/Dashlocal";
+import { AddCredit } from "./component/user/Guest/AddCredit";
 import AdminLogin from "./component/common/login/AdminLogin";
 import { AdminReg } from "./component/common/registation/AdminReg";
 
@@ -30,6 +29,8 @@ function App() {
           <Route path={'/login'} exact element={<Login/>}/>
           <Route path={'/localdash'} exact element={<Dashlocal/>}/>
           <Route path={'/visitlog'} exact element={<Visitorlog/>}/>
+          <Route path={'/addcredit'} exact element={<AddCredit/>}/>
+
 
           {/* <Route path={'/'} exact element={<Home/>}/> */}
           {/* Inspector */}
@@ -39,8 +40,7 @@ function App() {
           <Route path={'/addtable'} exact element={<AddTimeTables/>}/>
           <Route path={'/allocate'} exact element={<AllocateInspector/>}/>
           {/* SAdmin*/}
-          <Route path={'/inspector'} exact element={<AddInspector/>}/>
-          <Route path={'/manager'} exact element={<AddPublicManager/>}/>
+        
           <Route path={'/admin'} exact element={<AdminLogin/>}/>
           <Route path={'/regA'} exact element={<AdminReg/>}/>
 

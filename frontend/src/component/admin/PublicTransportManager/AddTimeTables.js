@@ -1,8 +1,16 @@
 import {React, useState, useEffect} from 'react'
 import { SideNav } from '../SideNav'
 import axios from 'axios'
+import Swal from 'sweetalert2'
 
 export const AddTimeTables = () => {
+
+  async function SweatAlert(text, item) {
+    Swal.fire({
+    icon: item,
+    text: text,
+    })
+}
 
     const [orgin, setOrgin] = useState('');
     const [destination, setDestination] = useState('');
@@ -16,16 +24,16 @@ export const AddTimeTables = () => {
     try {
       if ((orgin == '' ) || (destination == '' ) || (starttime == '' || (endtime =='') ) ) 
       {
-        // SweatAlert('Please fill the required fields.', 'warning')
+        SweatAlert('Please fill the required fields.', 'warning')
       }
       else if((orgin == '' ) || (destination == '' ) || (starttime == '' || (endtime ==''))) 
       {
-        // SweatAlert('Please fill the required fields.', 'warning')
+        SweatAlert('Please fill the required fields.', 'warning')
       }
       else 
       {
         axios.post('http://localhost:5000/timetable/add', table);
-        // SweatAlert('Successfully insereted', 'success')
+        SweatAlert('Successfully insereted', 'success')
         alert('success');
         // navigate('/getinvalidtokens')
       }

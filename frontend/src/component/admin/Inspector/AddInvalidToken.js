@@ -1,7 +1,14 @@
 import { useState, React, useEffect} from 'react';
 import axios from 'axios';
 import { SideNav } from '../SideNav';
+import Swal from "sweetalert2";
 
+async function SweatAlert(text, item) {
+  Swal.fire({
+    icon: item,
+    text: text,
+  })
+}
 export const AddInvalidToken = () => {
 
     const [data, setData] = useState([]);
@@ -29,16 +36,16 @@ export const AddInvalidToken = () => {
     try {
       if ((inspectorid == '' ) || (date == '' ) || (count == '' ) || (route == '' ) || (reason == '' )) 
       {
-        alert('please fill all the fields')
+        SweatAlert('Please fill the required fields.', 'warning')
       }
       else if ((inspectorid == '' ) && (date == '' ) && (count == '' ) && (route == '' ) && (reason == '' )) 
       {
-        alert('please fill all the fields')
+        SweatAlert('Please fill the required fields.', 'warning')
       }
        else 
       {
         axios.post('http://localhost:5000/invalidtoken/add', token);
-        alert('success');
+        SweatAlert('Successfully insereted', 'success')
         // navigate('/getinvalidtokens')
       }
     } catch (err) {
