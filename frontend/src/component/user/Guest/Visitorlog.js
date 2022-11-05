@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { NavBar } from "../../common/NavBar";
 // import './App.css';
 
 export const Visitorlog = () => {
@@ -35,6 +36,9 @@ export const Visitorlog = () => {
   }
 
   return (
+    <div>
+      <NavBar/>
+
     <div className="App container" style={{marginLeft:"30%"}}>
       {/* <h1>QR Code Generator</h1> */}
       <div className="input-box">
@@ -128,6 +132,7 @@ export const Visitorlog = () => {
           <button type="button ">Download</button>
         </a>
       </div>
+    </div>
     </div>
   );
 };

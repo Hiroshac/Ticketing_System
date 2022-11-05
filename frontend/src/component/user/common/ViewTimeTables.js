@@ -1,5 +1,6 @@
 import {React,  useState, useEffect } from "react"
 import axios from "axios"
+import { NavBar } from "../../common/NavBar";
 
 export const ViewTimeTables = () => {
     
@@ -31,6 +32,7 @@ export const ViewTimeTables = () => {
 
   return (
     <div>
+      <NavBar/>
         <div className='row ' style={{width:"100%"}}>
         <div className='col-sm-3' style={{marginLeft:"40%", marginTop:"5%", width:"60%"}}>
                   <div className='border shadow rounded-3 bg-light'>

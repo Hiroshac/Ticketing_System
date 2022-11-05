@@ -2,6 +2,7 @@ import { useState, React, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Swal from "sweetalert2";
+import { NavBar } from '../../common/NavBar';
 
 export const AddCredit = () => {
 
@@ -48,6 +49,7 @@ export const AddCredit = () => {
 
   return (
     <div>
+      <NavBar/>
             <div className='row ' style={{width:"100%"}}>
             <div className='col'  style={{width:"70%",marginLeft:"5%"}}>
               <form className='' onSubmit={addCredit}>

@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import logo from "../logo.png";
+import { Navbarhome } from "../Navbarhome";
 
 export const Registation = () => {
   const [fullname, setFullname] = useState("");
@@ -78,6 +79,7 @@ export const Registation = () => {
 
   return (
     <div>
+      <Navbarhome/>
       <div className="Container" style={{width:"70%",marginLeft:"15%"}}>
         <section className="vh-100">
           <div className="container-fluid h-custom">
